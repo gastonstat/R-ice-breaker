@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 Intro to R Markdown Files | Breaking the Ice with R and RStudio</title>
+  <meta name="description" content="<p>This manuscript is a minimal tutorial introduction for getting started with R
+and RStudio Posit.</p>" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6 Intro to R Markdown Files | Breaking the Ice with R and RStudio" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="https://www.gastonsanchez.com/R-ice-breaker/images/R-ice-breaker-cover.png" />
+  <meta property="og:description" content="<p>This manuscript is a minimal tutorial introduction for getting started with R
+and RStudio Posit.</p>" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6 Intro to R Markdown Files | Breaking the Ice with R and RStudio" />
+  
+  <meta name="twitter:description" content="<p>This manuscript is a minimal tutorial introduction for getting started with R
+and RStudio Posit.</p>" />
+  <meta name="twitter:image" content="https://www.gastonsanchez.com/R-ice-breaker/images/R-ice-breaker-cover.png" />
+
+<meta name="author" content="Gaston Sanchez" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="session.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"><b>R Ice Breaker</b><br><small>Gaston Sanchez</small></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#my-series-of-r-tutorials"><i class="fa fa-check"></i>My Series of R Tutorials</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#donation"><i class="fa fa-check"></i>Donation</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i>License</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="installing-r.html"><a href="installing-r.html"><i class="fa fa-check"></i><b>1</b> Installing R</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="installing-r.html"><a href="installing-r.html#interacting-with-r"><i class="fa fa-check"></i><b>1.1</b> Interacting with R</a></li>
+<li class="chapter" data-level="1.2" data-path="installing-r.html"><a href="installing-r.html#installing-r-1"><i class="fa fa-check"></i><b>1.2</b> Installing R</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="installing-rstudio.html"><a href="installing-rstudio.html"><i class="fa fa-check"></i><b>2</b> Installing RStudio</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="installing-rstudio.html"><a href="installing-rstudio.html#download-rstudio"><i class="fa fa-check"></i><b>2.1</b> Download RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="rintro.html"><a href="rintro.html"><i class="fa fa-check"></i><b>3</b> First Contact with R</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="rintro.html"><a href="rintro.html#first-contact-with-r-via-rstudio"><i class="fa fa-check"></i><b>3.1</b> First Contact with R (via RStudio)</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="rintro.html"><a href="rintro.html#r-as-a-scientific-calculator"><i class="fa fa-check"></i><b>3.1.1</b> R as a scientific calculator</a></li>
+<li class="chapter" data-level="3.1.2" data-path="rintro.html"><a href="rintro.html#assigning-values-to-objects"><i class="fa fa-check"></i><b>3.1.2</b> Assigning values to objects</a></li>
+<li class="chapter" data-level="3.1.3" data-path="rintro.html"><a href="rintro.html#object-names"><i class="fa fa-check"></i><b>3.1.3</b> Object Names</a></li>
+<li class="chapter" data-level="3.1.4" data-path="rintro.html"><a href="rintro.html#case-sensitive"><i class="fa fa-check"></i><b>3.1.4</b> Case Sensitive</a></li>
+<li class="chapter" data-level="3.1.5" data-path="rintro.html"><a href="rintro.html#calling-functions"><i class="fa fa-check"></i><b>3.1.5</b> Calling Functions</a></li>
+<li class="chapter" data-level="3.1.6" data-path="rintro.html"><a href="rintro.html#comments-in-r"><i class="fa fa-check"></i><b>3.1.6</b> Comments in R</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="rintro.html"><a href="rintro.html#help-documentation"><i class="fa fa-check"></i><b>3.2</b> Getting Help</a></li>
+<li class="chapter" data-level="3.3" data-path="rintro.html"><a href="rintro.html#installing-packages"><i class="fa fa-check"></i><b>3.3</b> Installing Packages</a></li>
+<li class="chapter" data-level="3.4" data-path="rintro.html"><a href="rintro.html#exercises"><i class="fa fa-check"></i><b>3.4</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>4</b> A Quick Tour Around RStudio</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="rstudio.html"><a href="rstudio.html#first-contact-with-rstudio"><i class="fa fa-check"></i><b>4.1</b> First Contact with RStudio</a></li>
+<li class="chapter" data-level="4.2" data-path="rstudio.html"><a href="rstudio.html#rstudio-panes-in-a-nutshell"><i class="fa fa-check"></i><b>4.2</b> RStudio Panes in a Nutshell</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="rstudio.html"><a href="rstudio.html#console"><i class="fa fa-check"></i><b>4.2.1</b> Console</a></li>
+<li class="chapter" data-level="4.2.2" data-path="rstudio.html"><a href="rstudio.html#files-plots-packages-help"><i class="fa fa-check"></i><b>4.2.2</b> Files, Plots, Packages, Help</a></li>
+<li class="chapter" data-level="4.2.3" data-path="rstudio.html"><a href="rstudio.html#source-or-editor"><i class="fa fa-check"></i><b>4.2.3</b> Source or Editor</a></li>
+<li class="chapter" data-level="4.2.4" data-path="rstudio.html"><a href="rstudio.html#environment-history-connections"><i class="fa fa-check"></i><b>4.2.4</b> Environment, History, Connections</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="rstudio.html"><a href="rstudio.html#exercises-1"><i class="fa fa-check"></i><b>4.3</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="session.html"><a href="session.html"><i class="fa fa-check"></i><b>5</b> Session Management</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="session.html"><a href="session.html#starting-a-session"><i class="fa fa-check"></i><b>5.1</b> Starting a Session</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="session.html"><a href="session.html#what-happens-when-you-open-an-r-session-via-rstudio"><i class="fa fa-check"></i><b>5.1.1</b> What happens when you open an R session via RStudio?</a></li>
+<li class="chapter" data-level="5.1.2" data-path="session.html"><a href="session.html#opening-a-session-for-the-first-time"><i class="fa fa-check"></i><b>5.1.2</b> Opening a session for the first time</a></li>
+<li class="chapter" data-level="5.1.3" data-path="session.html"><a href="session.html#working-directory"><i class="fa fa-check"></i><b>5.1.3</b> Working Directory</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="session.html"><a href="session.html#working-during-a-session"><i class="fa fa-check"></i><b>5.2</b> Working During a Session</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="session.html"><a href="session.html#sessions-working-directory"><i class="fa fa-check"></i><b>5.2.1</b> Session’s Working Directory</a></li>
+<li class="chapter" data-level="5.2.2" data-path="session.html"><a href="session.html#workspace-and-global-environment"><i class="fa fa-check"></i><b>5.2.2</b> Workspace and Global Environment</a></li>
+<li class="chapter" data-level="5.2.3" data-path="session.html"><a href="session.html#commands-history"><i class="fa fa-check"></i><b>5.2.3</b> Commands History</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="session.html"><a href="session.html#closing-a-session"><i class="fa fa-check"></i><b>5.3</b> Closing a Session</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="rmdfiles.html"><a href="rmdfiles.html"><i class="fa fa-check"></i><b>6</b> Intro to R Markdown Files</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="rmdfiles.html"><a href="rmdfiles.html#get-to-know-rmd-files"><i class="fa fa-check"></i><b>6.1</b> Get to know <code>Rmd</code> files</a>
+<ul>
+<li class="chapter" data-level="6.1.1" data-path="rmdfiles.html"><a href="rmdfiles.html#what-is-an-rmd-file"><i class="fa fa-check"></i><b>6.1.1</b> What is an <code>Rmd</code> file?</a></li>
+<li class="chapter" data-level="6.1.2" data-path="rmdfiles.html"><a href="rmdfiles.html#anatomy-of-an-rmd-file"><i class="fa fa-check"></i><b>6.1.2</b> Anatomy of an <code>Rmd</code> file</a></li>
+<li class="chapter" data-level="6.1.3" data-path="rmdfiles.html"><a href="rmdfiles.html#how-does-an-rmd-file-work"><i class="fa fa-check"></i><b>6.1.3</b> How does an Rmd file work?</a></li>
+<li class="chapter" data-level="6.1.4" data-path="rmdfiles.html"><a href="rmdfiles.html#yet-another-syntax-to-learn"><i class="fa fa-check"></i><b>6.1.4</b> Yet Another Syntax to Learn</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="rmdfiles.html"><a href="rmdfiles.html#code-chunks"><i class="fa fa-check"></i><b>6.2</b> Code chunks</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="rmdfiles.html"><a href="rmdfiles.html#resources-for-markdown"><i class="fa fa-check"></i><b>6.2.1</b> Resources for Markdown</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://www.gastonsanchez.com" target="_blank">gastonsanchez.com</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Breaking the Ice with R and RStudio</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="rmdfiles" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">6</span> Intro to R Markdown Files<a href="rmdfiles.html#rmdfiles" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Most of the times you won’t be working directly on the console.
+Instead, you will be typing your commands in some <strong>source file</strong>.
+The most basic type of source files are known as <em>R script files</em>.
+But there are more flavors of source files. A very convenient type of source
+file that allow you to mix R code with narrative is an <strong>R markdown file</strong>
+commonly referred to as <code>Rmd</code> file.</p>
+<div id="get-to-know-rmd-files" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Get to know <code>Rmd</code> files<a href="rmdfiles.html#get-to-know-rmd-files" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the menu bar of RStudio, click on <strong>File</strong>, then <strong>New File</strong>,
+and choose <strong>R Markdown</strong>. Select the default option (Document),
+and click <strong>Ok</strong>.</p>
+<p><strong>Rmd</strong> files are a special type of file, referred to as a <em>dynamic document</em>,
+that allows to combine narrative (text) with R code. Because you will
+be turning in most homework assignments as <code>Rmd</code> files, it is important
+that you quickly become familiar with this resource.</p>
+<p>Locate the button <strong>Knit HTML</strong> (the one with a knitting icon) and click on it
+so you can see how <code>Rmd</code> files are rendered and displayed as HTML documents.</p>
+<div id="what-is-an-rmd-file" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> What is an <code>Rmd</code> file?<a href="rmdfiles.html#what-is-an-rmd-file" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Rmd</strong> files are a special type of file, referred to as a <em>dynamic document</em>.
+This is the fancy term we use to describe a document that allows us to combine
+narrative (text) with R code in one single file.</p>
+<p><em>R markdown</em> files use a special syntax called <strong>markdown</strong>. To be more precise,
+Rmd files let you type text using either: 1) R syntax for code that needs to be
+executed; 2) markdown syntax to write your <em>narrative</em>, and 3) latex syntax for
+math equations and symbols.</p>
+<p>Rmd files are plain text files. This means that you can open an Rmd file
+with any text editor (not just RStudio) and being able to see and edit its
+contents.</p>
+<p>The main idea behind dynamic documents is simple yet very powerful: instead of
+working with two separate files, one that contains the R code, and
+another one that contains the narrative, you use an <code>.Rmd</code> file to include
+both the commands and the narrative.</p>
+<p>One of the main advantages of this paradigm,
+is that you avoid having to copy results from your computations and paste them
+into a report file. In fact, there are more complex ways to work with dynamic
+documents and source files. But the core idea is the same: combine narrative
+and code in a way that you let the computer do the manual, repetitive,
+and time consuming job.</p>
+<p>Rmd files is just one type of dynamic document that you will find in RStudio.
+In fact, RStudio provides other file formats that can be used
+as dynamic documents: e.g. <code>.Rnw</code>, <code>.Rpres</code>, <code>.Rhtml</code>, etc.</p>
+</div>
+<div id="anatomy-of-an-rmd-file" class="section level3 hasAnchor" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Anatomy of an <code>Rmd</code> file<a href="rmdfiles.html#anatomy-of-an-rmd-file" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The structure of an <code>.Rmd</code> file can be divided in two parts: 1) a <strong>YAML header</strong>,
+and 2) the <strong>body</strong> of the document. In addition to this structure, you should
+know that <code>.Rmd</code> files use three types of syntaxes: YAML, Markdown, and R.</p>
+<p>The <em>YAML header</em> consists of the first few lines at the top of the file.
+This header is established by a set of three dashes <code>---</code> as delimiters
+(one starting set, and one ending set). This part of the file requires you
+to use YAML syntax (Yet Another Markup Language.)
+Within the delimiter sets of dashes, you specify settings (or metadata) that
+will apply to the entire document. Some of the common
+options are things like:</p>
+<ul>
+<li><code>title</code></li>
+<li><code>author</code></li>
+<li><code>date</code></li>
+<li><code>output</code></li>
+</ul>
+<p>The <em>body</em> of the document is everything below the YAML header. It consists
+of a mix of narrative and R code. All the text that is narrative is written
+in a markup syntax called <strong>Markdown</strong> (although you can also use LaTeX math
+notation). In turn, all the text that is code
+is written in R syntax inside <em>blocks of code</em>.</p>
+<p>There are two types of blocks of code: 1) <strong>code chunks</strong>, and
+2) <strong>inline code</strong>. Code chunks are lines of text separated from any lines of
+narrative text. Inline code is code inserted within a line of narrative text .</p>
+</div>
+<div id="how-does-an-rmd-file-work" class="section level3 hasAnchor" number="6.1.3">
+<h3><span class="header-section-number">6.1.3</span> How does an Rmd file work?<a href="rmdfiles.html#how-does-an-rmd-file-work" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Rmd files are plain text files. All that matters is the syntax of its content.
+The content is basically divided in the header, and the body.</p>
+<ul>
+<li>The header uses YAML syntax.</li>
+<li>The narrative in the body uses Markdown syntax.</li>
+<li>The code and commands use R syntax.</li>
+</ul>
+<p>The process to generate a nice rendered document from an Rmd file is
+known as <strong>knitting</strong>. When you <em>knit</em> an Rmd file, various R packages
+and programs run behind the scenes. But the process can be broken down
+in three main phases: 1) Parsing, 2) Execution, and 3) Rendering.</p>
+<ol style="list-style-type: decimal">
+<li>Parsing: the content of the file is parsed (examined line by line)
+and each component is identified as yaml header, or as markdown text, or as R code.</li>
+</ol>
+<p>Each component receives a special treatment and formatting.</p>
+<p>The most interesting part is in the pieces of text that are R code.
+Those are separated and executed if necessary. The commands may be included
+in the final document. Also, the output may be included in the final document.
+Sometimes, nothing is executed nor included.</p>
+<p>Depending on the specified output format (e.g. HTML, pdf, word), all the
+components are assembled, and one single document is generated.</p>
+</div>
+<div id="yet-another-syntax-to-learn" class="section level3 hasAnchor" number="6.1.4">
+<h3><span class="header-section-number">6.1.4</span> Yet Another Syntax to Learn<a href="rmdfiles.html#yet-another-syntax-to-learn" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>R markdown (<code>Rmd</code>) files use <a href="https://daringfireball.net/projects/markdown/">markdown</a>
+as the main syntax to write content. Markdown is a very lightweight type of
+markup language, and it is relatively easy to learn.</p>
+<p>One of the most common sources of confusion when learning about R and Rmd
+files has to do with the hash symbol <code>#</code>. As you know, <code>#</code> is the character
+used by R to indicate comments. The issue is that the <code>#</code> character has a
+different meaning in markdown syntax. Hashes in markdown are used to define
+levels of headings.</p>
+<p>In an Rmd file, a hash <code>#</code> that is inside a code chunk will be treated as
+an R comment. A hash outside a code chunk, will be treated as markdown syntax,
+making its associated text a given type of heading.</p>
+</div>
+</div>
+<div id="code-chunks" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> Code chunks<a href="rmdfiles.html#code-chunks" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There are dozens of options available to control the executation of the code,
+the formatting and display of both the commands and the output, the display
+of images, graphs, and tables, and other fancy things. Here’s a list of the
+basic options you should become familiar with:</p>
+<ul>
+<li><code>eval</code>: whether the code should be evaluated
+<ul>
+<li><code>TRUE</code></li>
+<li><code>FALSE</code></li>
+</ul></li>
+<li><code>echo</code>: whether the code should be displayed
+<ul>
+<li><code>TRUE</code></li>
+<li><code>FALSE</code></li>
+<li>numbers indicating lines in a chunk</li>
+</ul></li>
+<li><code>error</code>: whether to stop execution if there is an error
+<ul>
+<li><code>TRUE</code></li>
+<li><code>FALSE</code></li>
+</ul></li>
+<li><code>results</code>: how to display the output
+<ul>
+<li><code>markup</code></li>
+<li><code>asis</code></li>
+<li><code>hold</code></li>
+<li><code>hide</code></li>
+</ul></li>
+<li><code>comment</code>: character used to indicate output lines
+<ul>
+<li>the default is a double hash <code>##</code></li>
+<li><code>""</code> empty character (to have a cleaner display)</li>
+</ul></li>
+</ul>
+<div id="resources-for-markdown" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Resources for Markdown<a href="rmdfiles.html#resources-for-markdown" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In RStudio’s menu bar select the <code>Help</code> tab. Then click on the option
+<code>Markdown Quick Reference</code>.</p>
+<p>Work through the markdown tutorial:
+<a href="http://www.markdown-tutorial.com" target="_blank">www.markdown-tutorial.com</a></p>
+<p>Your turn: After lab discussion, find some time to go through this
+additional markdown tutorial
+<a href="http://www.markdowntutorial.com" target="_blank">www.markdowntutorial.com</a></p>
+<p>RStudio has a very comprehensive R Markdown tutorial:
+<a href="https://rmarkdown.rstudio.com/lesson-1.html" target="_blank">Rstudio markdown tutorial</a></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="session.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["R-ice-breaker.pdf", "R-ice-breaker.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
