@@ -1,8 +1,8 @@
 # Ice BreakeR: Getting Started with R & RStudio
 
-This is a beginner's tutorial for getting started with R and RStudio.
-
-<https://www.gastonsanchez.com/R-ice-breaker>
+This repository contains the text of 
+<a href="https://www.gastonsanchez.com/R-ice-breaker" target="_blank"><strong>Breaking the Ice with R: Getting Started with R and RStudio</strong></a> by 
+<a href="https://www.gastonsanchez.com" target="_blank">Gaston Sanchez</a>
 
 
 ## Donation
