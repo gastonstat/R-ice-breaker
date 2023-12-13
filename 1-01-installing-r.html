@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>R Ice Breaker - 1&nbsp; Installing R</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./1-02-installing-rstudio.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing R</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">R Ice Breaker</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">About</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1-01-installing-r.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing R</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1-02-installing-rstudio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Installing RStudio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1-03-first-contact.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">First Contact with R</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1-04-rstudio-tour.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">A Quick Tour Around RStudio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1-05-session-management.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Session Management</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#interacting-with-r" id="toc-interacting-with-r" class="nav-link active" data-scroll-target="#interacting-with-r"><span class="toc-section-number">1.1</span>  Interacting with R</a></li>
+  <li><a href="#installing-r" id="toc-installing-r" class="nav-link" data-scroll-target="#installing-r"><span class="toc-section-number">1.2</span>  Installing R</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="installing-r" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing R</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>To learn how to use R, you obviously need to have access to it. This chapter, and the next one, guide you through the installation process of R and RStudio so that you can have both programs up and running in your computer.</p>
+<p>If you already have R and RStudio installed in your machine, you can safely go to chapter <a href="1-03-first-contact.html">First Contact with R</a>.</p>
+<section id="interacting-with-r" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="interacting-with-r"><span class="header-section-number">1.1</span> Interacting with R</h2>
+<p>Before I show you how to install R and the integrated development environment RStudio, let me tell you first about the different ways in which users can work with R.</p>
+<p>Overall, you can work with R in two major ways:</p>
+<ol type="1">
+<li><p>Interactive Mode, and</p></li>
+<li><p>Non-interactive Mode</p></li>
+</ol>
+<p><strong>Interactive Mode.</strong> Most R users work with R in an interactive way, and this is certainly the way I personally interact with R in my daily coding activities. Interactive means that you launch R (i.e.&nbsp;you open a session), having direct access to its console. This is where you type in commands, and then R does its magic reading the commands, parsing them, evaluating them, and—typically—printing an output back into the console, waiting for you to type in the next command(s).</p>
+<p><strong>Non-interactive Mode.</strong> In contrast to interactive mode, working with R in non-interactive way involves writing all the commands in a text file (for example in an <code>R</code> script file), and then asking your computer—via the command line interface—to pass this file to R so that it runs the commands without you launching R or having direct access to its console.</p>
+<p>Think of interactive way as having a direct conversation with R, establishing a dialogue in which you type in a command, R interprets it, gives you an answer, and then you type more commands, continuing the dialogue. In contrast, non-interactive is like writing a letter (or an email) to R. Here you don’t have that synchronous conversation, instead R will see the script file, try to execute all the commands “behind the scenes”, and it will disappear when it finishes the computations. You may get some output back, but R is gone in the sense that there is no open session waiting for you to execute the next instructions.</p>
+<p>Most of what I discuss in this book is applicable to writing code in R regardless of how you decide to interact with R. However, to learn R and to follow the examples of the book it is definitely much better to do it in an interactive way using: a) R’s built-in graphical user interface (R’s GUI), b) an integrated development environment (IDE) such as RStudio, or c) R from a command line interface (CLI) commonly referred to as a <em>terminal</em>.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<figure class="figure">
+<img src="images/install/r-interactive-ways.png" title="Title: Interacting with R" class="img-fluid figure-img" style="width:90.0%">
+</figure>
+<p></p><figcaption class="figure-caption">Figure 1.1: Interacting with R in various ways: R’s GUI, RStudio, and R from a command-line terminal</figcaption><p></p>
+</figure>
+</div>
+<p>While you can interact with R using its built-in graphical user interface (GUI) or launching R from the terminal (command line interface), nowadays I highly recommend that you interact with it using an <em>Integrated Development Environment</em> (IDE) such as <a href="https://www.rstudio.com/"><strong>RStudio</strong></a>. Simply put, programs like RStudio provide a nice working space that make your life easier while writing code, creating all sorts of reports, documents, and slides, running analysis, making graphs, generating outputs, creating web apps, etc.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<figure class="figure">
+<img src="images/rstudio/r-rstudio-logos.png" title="Title: Main computational tools" class="img-fluid figure-img" style="width:40.0%">
+</figure>
+<p></p><figcaption class="figure-caption">Figure 1.2: Main computational tools: R and RStudio</figcaption><p></p>
+</figure>
+</div>
+<p>Keep in mind that R and RStudio are not the same thing. R is like the main<br>
+“engine” or computational core. RStudio is just a convenient layer that talks directly to R, and gives us a convenient working space to organize our files, to type in code, to run commands, visualize plots, interact with our filesystem, etc. Having said that, everything that happens in RStudio, can be done in R alone. Yes, you may need to write more code and work in a more rudimentary way, but nothing should stop your work in R if one day RStudio disappears from the face of the earth.</p>
+<p>By the way, both R and RStudio are free, and available for Mac (OS X), Windows, and Linux (e.g.&nbsp;Ubuntu, Fedora, Debian). More about this in the following sections.</p>
+</section>
+<section id="installing-r" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="installing-r"><span class="header-section-number">1.2</span> Installing R</h2>
+<p>To download and install R in your computer, follow the steps listed below.</p>
+<p><strong>Step 1)</strong> Go to the <strong>R project</strong> website: <a href="https://r-project.org" class="uri">https://r-project.org</a></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<figure class="figure">
+<img src="images/install/r-project.png" title="Title: R project's home webpage" class="img-fluid figure-img" style="width:70.0%">
+</figure>
+<p></p><figcaption class="figure-caption">Figure 1.3: R project’s home webpage</figcaption><p></p>
+</figure>
+</div>
+<p><strong>Step 2)</strong> Click on the CRAN link, located in the navigation bar (on the left side). This will take you to the <em>Comprehensive R Archive Network</em> page (see screenshot below).</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<figure class="figure">
+<img src="images/install/cran-download.png" title="Title: R for MacOS, Windows, and Linux" class="img-fluid figure-img" style="width:70.0%">
+</figure>
+<p></p><figcaption class="figure-caption">Figure 1.4: R is available for MacOS, Windows, and Linux</figcaption><p></p>
+</figure>
+</div>
+<p><strong>Step 3)</strong> Click on the download option that corresponds to your operating system (e.g.&nbsp;Linux, Mac, or Windows). In my case, I have a Mac computer, which explains why the Mac OS-X link is highlighted in the above screenshot.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<figure class="figure">
+<img src="images/install/cran-mac.png" title="Title: CRAN download for Mac" class="img-fluid figure-img" style="width:70.0%">
+</figure>
+<p></p><figcaption class="figure-caption">Figure 1.5: CRAN download for Mac</figcaption><p></p>
+</figure>
+</div>
+<p>For most users, you will want to install the <strong>Latest release</strong>, which in the screenshot above happens to be <code>R 4.0.5 "Shake and Throw"</code>. Keep in mind that by the time you read this book, R will very likely have a more recent version.</p>
+<p><strong>Step 4)</strong> Click on the package link, which in the screenshot corresponds to <code>R-4.0.5.pkg</code>. This is the link of a compressed file that contains the binary code. Before installing a given version of R, read the description of the release to make sure the operating system in your computer is compatible with a specific version of R.</p>
+<p>After clicking on the <code>R-4.0.5.pkg</code> link, the compressed file will be downloaded to your computer.</p>
+<p><strong>Step 5.</strong> Click on the downloaded file. An installation wizard will open automatically, ready to guide you through the installation process, step by step (see image below).</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<figure class="figure">
+<img src="images/install/R-install-steps.png" title="Title: R Installation wizard for Mac" class="img-fluid figure-img" style="width:90.0%">
+</figure>
+<p></p><figcaption class="figure-caption">Figure 1.6: R Installation wizard for Mac</figcaption><p></p>
+</figure>
+</div>
+<p>In most cases, you will want to use the default settings. Personally, I’ve been using the default settings for several years without having the need to customize anything.</p>
+<p>At the end of the installation, if everything went well, you should be able to see a successful message (see figure below):</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<figure class="figure">
+<img src="images/install/install-5.png" title="Title: R Installation wizard for Mac" class="img-fluid figure-img" style="width:50.0%">
+</figure>
+<p></p><figcaption class="figure-caption">Figure 1.7: R Installation success</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">About</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./1-02-installing-rstudio.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Installing RStudio</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

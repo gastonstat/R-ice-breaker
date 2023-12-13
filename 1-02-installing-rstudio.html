@@ -6,11 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Gaston Sanchez">
-<meta name="dcterms.date" content="2023-12-13">
-<meta name="description" content="This manuscript is a minimal tutorial introduction for getting started with R and RStudio Posit.">
 
-<title>R Ice Breaker</title>
+<title>icebreaker-quarto - 2&nbsp; Installing RStudio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./1-01-installing-r.html" rel="next">
-<link href="./images/favicon.ico" rel="icon">
+<link href="./1-01-installing-r.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -64,20 +60,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-<script type="text/javascript">
-
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-46765288', 'auto');
-
-ga('send', {
-  hitType: 'pageview',
-  'anonymizeIp': true,
-});
-</script>
-
 
 </head>
 
@@ -87,7 +69,7 @@ ga('send', {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">R Ice Breaker</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Installing RStudio</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -100,7 +82,7 @@ ga('send', {
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">R Ice Breaker</a> 
+      <a href="./">icebreaker-quarto</a> 
     </div>
       </div>
       <div class="mt-2 flex-shrink-0 align-items-center">
@@ -112,7 +94,7 @@ ga('send', {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">About</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">About</a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -122,22 +104,7 @@ ga('send', {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1-02-installing-rstudio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Installing RStudio</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./1-03-first-contact.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">First Contact with R</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./1-04-rstudio-tour.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">A Quick Tour Around RStudio</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./1-05-session-management.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Session Management</span></a>
+  <a href="./1-02-installing-rstudio.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Installing RStudio</span></a>
   </div>
 </li>
     </ul>
@@ -149,12 +116,7 @@ ga('send', {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#about" id="toc-about" class="nav-link active" data-scroll-target="#about">About</a>
-  <ul class="collapse">
-  <li><a href="#my-series-of-r-tutorials" id="toc-my-series-of-r-tutorials" class="nav-link" data-scroll-target="#my-series-of-r-tutorials">My Series of R Tutorials</a></li>
-  <li><a href="#donation" id="toc-donation" class="nav-link" data-scroll-target="#donation">Donation</a></li>
-  <li><a href="#license" id="toc-license" class="nav-link" data-scroll-target="#license">License</a></li>
-  </ul></li>
+  <li><a href="#download-rstudio" id="toc-download-rstudio" class="nav-link active" data-scroll-target="#download-rstudio"><span class="toc-section-number">2.1</span>  Download RStudio</a></li>
   </ul>
 </nav>
     </div>
@@ -163,83 +125,57 @@ ga('send', {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">R Ice Breaker</h1>
+<h1 class="title"><span id="installing-rstudio" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Installing RStudio</span></span></h1>
 </div>
 
-<div>
-  <div class="description">
-    This manuscript is a minimal tutorial introduction for getting started with R and RStudio Posit.
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p><a href="https://www.gastonsanchez.com" target="_blank"><b>Gaston Sanchez</b></a> </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">December 13, 2023</p>
-    </div>
-  </div>
     
   </div>
   
 
 </header>
 
-
-<section id="about" class="level1 unnumbered">
-<p><img src="images/R-ice-breaker-cover.png" title="R Ice Breaker" class="quarto-cover-image img-fluid"></p><h1 class="unnumbered">About</h1>
-<p>This manuscript provides a brief tutorial for getting started with R and RStudio.</p>
-<section id="citation" class="level4 unnumbered">
-<h4 class="unnumbered anchored" data-anchor-id="citation">Citation</h4>
-<p>You can cite this work as:</p>
-<p>Sanchez, G. (2022) Breaking the Ice with R and RStudio. <br> https://www.gastonsanchez.com/R-ice-breaker</p>
-<hr>
-</section>
-<section id="my-series-of-r-tutorials" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="my-series-of-r-tutorials">My Series of R Tutorials</h3>
-<p>This document is part of series of texts that I’ve written about Programming and Data Analysis in R:</p>
-<ul>
-<li><strong>Breaking the Ice with R: Getting Started with R and RStudio</strong></li>
-</ul>
-<p><a href="https://www.gastonsanchez.com/R-ice-breaker" class="uri">https://www.gastonsanchez.com/R-ice-breaker</a></p>
-<ul>
-<li><strong>Tidy Hurricanes: Analyzing Tropical Storms with Tidyverse Tools</strong></li>
-</ul>
-<p><a href="https://www.gastonsanchez.com/R-tidy-hurricanes" class="uri">https://www.gastonsanchez.com/R-tidy-hurricanes</a></p>
-<ul>
-<li><strong>R Coding Basics: An Introduction to the Basics of Coding in R</strong></li>
-</ul>
-<p><a href="https://www.gastonsanchez.com/R-coding-basics" class="uri">https://www.gastonsanchez.com/R-coding-basics</a></p>
-<ul>
-<li><strong>Rolling Dice: Exploring Simulations in Games of Chance with R</strong></li>
-</ul>
-<p><a href="https://www.gastonsanchez.com/R-rolling-dice" class="uri">https://www.gastonsanchez.com/R-rolling-dice</a></p>
-<ul>
-<li><strong>Web Technologies in R: A Short Introduction to Web Technologies in R</strong></li>
-</ul>
-<p><a href="https://www.gastonsanchez.com/R-web-technologies" class="uri">https://www.gastonsanchez.com/R-web-technologies</a></p>
-<hr>
-</section>
-<section id="donation" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="donation">Donation</h3>
-<p>As a Data Science and Statistics educator, I love to share the work I do. Each month I spend dozens of hours curating learning materials like this resource. If you find any value and usefulness in it, please consider making a <a href="https://www.paypal.com/donate?business=ZF6U7K5MW25W2&amp;currency_code=USD" target="_blank">one-time donation—via paypal—in any amount</a> (e.g.&nbsp;the amount you would spend inviting me a cup of coffee or any other drink). Your support really matters.</p>
-<p><a href="https://www.paypal.com/donate?business=ZF6U7K5MW25W2&amp;currency_code=USD" target="_blank"><img src="https://www.gastonsanchez.com/images/donate.png" width="140" height="60"></a></p>
-</section>
-<section id="license" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="license">License</h3>
-<p><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"></a><br>This work is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+<p>In addition to R, the other program you will need to have installed in your machine is RStudio.</p>
+<p>Technically speaking, RStudio is an <em>Integrated Development Environment</em> (IDE) developed by <a href="https://posit.co">Posit</a>. An IDE is just the fancy term that is used for a program that provides a nice working space that make your life easier while writing code, running analysis, and making graphs. In addition, you can also use RStudio to create all sorts of reports, documents, slides, and web apps.</p>
+<section id="download-rstudio" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="download-rstudio"><span class="header-section-number">2.1</span> Download RStudio</h2>
+<p>To download the Desktop version of RStudio follow the steps listed below.</p>
+<p><strong>Step 1)</strong> Go to <strong>Posit’s</strong> download webpage:</p>
+<p><a href="https://posit.co/downloads/" class="uri">https://posit.co/downloads/</a></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<figure class="figure">
+<img src="images/install/posit-rstudio-download.png" title="Title: RStudio download options" class="img-fluid figure-img" style="width:80.0%">
+</figure>
+<p></p><figcaption class="figure-caption">Figure 2.1: RStudio download options</figcaption><p></p>
+</figure>
+</div>
+<p>At the time of this writing, there are two options of RStudio Desktop: 1) the Free version, and 2) the Pro version.</p>
+<p><strong>Step 2)</strong> Choose the <strong>Free</strong> version of RStudio Desktop (see image below), and click on the “DOWNLOAD” button.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<figure class="figure">
+<img src="images/install/posit-rstudio-free.png" title="Title: Choose RStudio free desktop" class="img-fluid figure-img" style="width:80.0%">
+</figure>
+<p></p><figcaption class="figure-caption">Figure 2.2: Choose RStudio free desktop</figcaption><p></p>
+</figure>
+</div>
+<p><strong>Step 3)</strong> Select the version that matches your operating system (e.g.&nbsp;Windows, macOS, linux). Double check that the operating system in your computer is compatible with a specific version of RStudio.</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<figure class="figure">
+<img src="images/install/posit-rstudio-versions.png" title="Title: RStudio Desktop versions" class="img-fluid figure-img" style="width:80.0%">
+</figure>
+<p></p><figcaption class="figure-caption">Figure 2.3: RStudio Desktop versions</figcaption><p></p>
+</figure>
+</div>
+<p>Once the installation of RStudio is completed, you should be able to open a new session in RStudio, and start interacting with R.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -343,11 +279,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./1-01-installing-r.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing R</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./1-01-installing-r.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing R</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

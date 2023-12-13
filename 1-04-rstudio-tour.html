@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>R Ice Breaker - 4&nbsp; A Quick Tour Around RStudio</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./1-05-session-management.html" rel="next">
+<link href="./1-03-first-contact.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">A Quick Tour Around RStudio</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">R Ice Breaker</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">About</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1-01-installing-r.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Installing R</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1-02-installing-rstudio.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Installing RStudio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1-03-first-contact.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">First Contact with R</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1-04-rstudio-tour.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">A Quick Tour Around RStudio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1-05-session-management.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Session Management</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#first-contact-with-rstudio" id="toc-first-contact-with-rstudio" class="nav-link active" data-scroll-target="#first-contact-with-rstudio"><span class="toc-section-number">4.1</span>  First Contact with RStudio</a></li>
+  <li><a href="#rstudio-panes-in-a-nutshell" id="toc-rstudio-panes-in-a-nutshell" class="nav-link" data-scroll-target="#rstudio-panes-in-a-nutshell"><span class="toc-section-number">4.2</span>  RStudio Panes in a Nutshell</a>
+  <ul class="collapse">
+  <li><a href="#console" id="toc-console" class="nav-link" data-scroll-target="#console"><span class="toc-section-number">4.2.1</span>  Console</a></li>
+  <li><a href="#files-plots-packages-help" id="toc-files-plots-packages-help" class="nav-link" data-scroll-target="#files-plots-packages-help"><span class="toc-section-number">4.2.2</span>  Files, Plots, Packages, Help</a></li>
+  <li><a href="#source-or-editor" id="toc-source-or-editor" class="nav-link" data-scroll-target="#source-or-editor"><span class="toc-section-number">4.2.3</span>  Source or Editor</a></li>
+  <li><a href="#environment-history-connections" id="toc-environment-history-connections" class="nav-link" data-scroll-target="#environment-history-connections"><span class="toc-section-number">4.2.4</span>  Environment, History, Connections</a></li>
+  </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="toc-section-number">4.3</span>  Exercises</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span id="rstudio" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">A Quick Tour Around RStudio</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<p>As I mentioned in the previous chapter, R comes with a simple built-in graphical user interface, or <em>GUI</em> for short. While you can use this interface to work with R, it is more convenient if you interact with R using a third party software such as RStudio.</p>
+<p>Technically speaking, RStudio is an IDE which is the acronym for <em>Integrated Development Environment</em>. This is just the fancy name for any software application that provides comprehensive facilities to programmers for making their lives easier when writing code and developing programs.</p>
+<p>Simply put, you can think of RStudio as a “workbench” that gives you an organized working space for interacting with R, while taking care of many of the little tasks that can be a hassle.</p>
+<section id="first-contact-with-rstudio" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="first-contact-with-rstudio"><span class="header-section-number">4.1</span> First Contact with RStudio</h2>
+<p>When you open RStudio, you should be able to see its layout organized into quadrants officially called <em>panes</em> (or panels).</p>
+<p>The very first time you launch RStudio you will only see three panes, like in the screenshot below.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<figure class="figure">
+<img src="images/rstudio/rstudio-launch-first-time.png" title="Title: Launching RStudio for the first time" class="img-fluid figure-img" style="width:90.0%">
+</figure>
+<p></p><figcaption class="figure-caption">Figure 4.1: Screenshot of RStudio when launched for the first time.</figcaption><p></p>
+</figure>
+</div>
+<p>As you can tell from the previous screenshot, the left-hand side shows the Console pane which is what we used in the previous chapter to write a handful of simple commands, execute them, and inspect the output provided by R.</p>
+<p>If RStudio only displays three panes, why do I call them “quadrants”? Where is the fourth pane? Well, to see the extra pane you need to open a file. One way to do this is by clicking on the icon of a blank file with a green plus sign. This button is located in the top-left corner of the icons menu bar of RStudio. A drop-down menu with a long list of available file formats will be displayed, the first option being an “R Script” file (see image below).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<figure class="figure">
+<img src="images/rstudio/rstudio-new-file.png" title="Title: Opening a new text file in RStudio" class="img-fluid figure-img" style="width:85.0%">
+</figure>
+<p></p><figcaption class="figure-caption">Figure 4.2: Opening a new (text) file in RStudio.</figcaption><p></p>
+</figure>
+</div>
+<p>Once you open a (text) file, the layout of RStudio will show the Editor quadrant, officially called the <em>Source</em> pane, like in the following screenshot.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<figure class="figure">
+<img src="images/rstudio/rstudio-quadrants.png" title="Title: RStudio quadrants" class="img-fluid figure-img" style="width:85.0%">
+</figure>
+<p></p><figcaption class="figure-caption">Figure 4.3: RStudio layout organized into quadrants.</figcaption><p></p>
+</figure>
+</div>
+<p>The visual appearance of RStudio’s quadrants can be a bit intimidating for beginners. But fear not. In the above screenshot, the panes are:</p>
+<ul>
+<li><p><code>Source</code> or editor pane (top left quadrant)</p></li>
+<li><p><code>Console</code> pane (bottom left quadrant)</p></li>
+<li><p><code>Environment/History/Connections</code> pane (top right quadrant)</p></li>
+<li><p><code>Files/Plots/Packages/Help</code> pane (bottom right quadrant)</p></li>
+</ul>
+<p><strong>Pro tip:</strong> among many other things, you can change the default location of the panes. If you are interested in knowing what customizing options are available in RStudio, visit the following link:</p>
+<p><a href="https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio" class="uri">https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio</a></p>
+<p>If you have no previous programming experience, you don’t have to customize anything right now. It’s better if you wait some days until you get a better feeling of the working environment. You will probably be experimenting (trial and error) some time with the customizing options until you find what works for you.</p>
+</section>
+<section id="rstudio-panes-in-a-nutshell" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="rstudio-panes-in-a-nutshell"><span class="header-section-number">4.2</span> RStudio Panes in a Nutshell</h2>
+<p>Sooner or later you will be using all four panes in RStudio. Most programming activities will require working with both the <code>Source</code> and <code>Console</code> panes. Certain operations will involve using the <code>Files</code> tab. Occasionally you will also use one of the tabs in the <code>Environment/History/etc</code> pane. The set of specific tabs that you have to use really depends on the type of work you plan to carry out. You will have time to learn the basics—and not so basics—of every pane throughout the book. The more time you spend in RStudio, and the more you use it, the more features you will discover about it.</p>
+<section id="console" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="console"><span class="header-section-number">4.2.1</span> Console</h3>
+<p>The <code>Console</code> is supposed to be the terminal—or the place—where you type in commands, which R then executes, and where the output of those commands is typically displayed. The truth is that most programmers don’t write commands <em>directly</em> in the console. Instead, what we use is the <code>Source</code> pane to write commands in a text file (e.g.&nbsp;an R-Script file, an R-Markdown file), and then execute the commands from that pane.</p>
+<p>The reason for writing commands in a text file and not directly in the console, is because of convenience and organization. <em>Convenience</em> because, as you will see, many commands involve writing several lines of code which can be tricky to write them correctly just by typing in the console. <em>Organization</em> in the sense that having all your commands in a text file makes it easy to store your code, keep track of all the work you do, build upon it, and share it with others.</p>
+<p>So, knowing that programmers rarely make direct use of the <code>Console</code>, when do you actually use this pane? I don’t know about the rest of programmers but I can tell you how I personally use it.</p>
+<p>One common use of the <code>Console</code> is when I want to calculate basic things like the monthly balance in my credit cards, or the overall score for one of the students in the classes I teach, or some other quick computation. These are types of calculations that I could perfectly perform with any scientific calculator like the one in my smartphone. But more often than not I prefer to do them in R, typically when that’s the tool I have at hand (which happens almost every day).</p>
+<p>The other typical situation in which I use the console is when I’m trying out some simple idea or testing if a certain command could work. I like to explore the feasibility of my code with a small example in the console, and then refine it or generalize it by writing code in a text file—using the <code>Source</code> pane.</p>
+</section>
+<section id="files-plots-packages-help" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="files-plots-packages-help"><span class="header-section-number">4.2.2</span> Files, Plots, Packages, Help</h3>
+<p>The <code>Files</code> quadrant contains multiple tabs.</p>
+<ul>
+<li><p><code>Files</code>: this tab lets you navigate your file system without the need of leaving RStudio. You can move to any directory or folder in your home directory, inspect the contents of a given folder, create a new folder, and perform standard operations on files such as opening, renaming, moving, copying, and deleting a file. In addition, you can also see the working directory, or change to a different directory if you want to.</p></li>
+<li><p><code>Plots</code>: this tab is used by R Graphics Devices to display any graphic or image produced by an R plotting function.</p></li>
+<li><p><code>Packages</code>: this tab allows you to install and update R packages. Often, you will want to use functions from external R packages, and to do this you must first install those packages in your system. While it is possible to write commands for doing this, the <code>Packages</code> tab gives you a richer interface to see what packages are already available in your computer, what their versions are, update them if necessary, or uninstall them in case you no longer need them.</p></li>
+<li><p><code>Help</code>: this is the tab that gives you access to the “help” or manual documentation of functions, objects, tutorials, and demos of a given R package. The <a href="1-03-first-contact.html#help-documentation">preceding chapter</a> contains an example of the manual documentation for the <code>log()</code> function, showing the main anatomy of the so-called <em>R Documentation</em> files.</p></li>
+</ul>
+</section>
+<section id="source-or-editor" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="source-or-editor"><span class="header-section-number">4.2.3</span> Source or Editor</h3>
+<p>The <code>Source</code> pane is basically the text editor of RStudio. This is the quadrant you use to edit any text file, again, without the need to leave RStudio. The reason why is called “source” is because the text files edited in this pane are, for the most part, files that contain the commands that R will run. In other words, these files are the <strong>source</strong> of the commands to be executed.</p>
+</section>
+<section id="environment-history-connections" class="level3" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="environment-history-connections"><span class="header-section-number">4.2.4</span> Environment, History, Connections</h3>
+<p>The last quadrant is the pane that contains, at least, the following three tabs: <code>Environment</code>, <code>History</code>, and <code>Connections</code>.</p>
+<p>I provide a deeper explanation of the <code>Environment</code> and <code>History</code> tabs in the following chapter <a href="1-05-session-management.html">Session Management</a>. In the meantime, what you need to know about <code>Environment</code> is that this tab is used to list the objects that have being created, or that are available, in a given R session.</p>
+<p>In turn, the <code>History</code> tab is a very useful resource that lists <strong>all</strong> the R commands that you have executed so far. In theory, R will track all the invoked commands since the first time you used it, unless you’ve removed the auxiliary <code>.Rhistory</code> file linked to your working directory, or unless you’ve modified the history mechanism used by your R console.</p>
+<p>As for the <code>Connections</code> tab, this plays a more advanced (and somewhat obscure) role that I briefly discuss in part IV of the book.</p>
+<hr>
+</section>
+</section>
+<section id="exercises" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="exercises"><span class="header-section-number">4.3</span> Exercises</h2>
+<p><strong>1)</strong> In RStudio, one of the panes has tabs <code>Files, Plots, Packages, Help, Viewer</code>.</p>
+<ol type="a">
+<li>In the tab <strong>Files</strong>, what happens when you click the button with a House icon?</li>
+<li>Go to the <strong>Help</strong> tab and search for the documentation of the function <code>mean</code>.</li>
+<li>In the tab <strong>Help</strong>, what happens when you click the button with a House icon?</li>
+</ol>
+<p><br></p>
+<p><strong>2)</strong> In RStudio, one of the panes has the tabs <code>Environment, History, Connections</code>.</p>
+<ol type="a">
+<li>If you click on tab <strong>History</strong>, what do see?</li>
+<li>Find what the buttons of the menu bar in tab <strong>History</strong> are for.</li>
+<li>Likewise, what can you say about the tab <strong>Environment</strong>?</li>
+</ol>
+<p><br></p>
+<p><strong>3)</strong> When you start a new R session in Rstudio, a message with similar content to the text below appears on the console (the exact content will depend on your R version):</p>
+<pre><code>   R version 3.5.1 (2018-07-02) -- "Feather Spray"
+   Copyright (C) 2018 The R Foundation for Statistical Computing
+   Platform: x86_64-apple-darwin15.6.0 (64-bit)
+
+   R is free software and comes with ABSOLUTELY NO WARRANTY.
+   You are welcome to redistribute it under certain conditions.
+   Type 'license()' or 'licence()' for distribution details.
+
+     Natural language support but running in an English locale   
+
+   R is a collaborative project with many contributors.
+   Type 'contributors()' for more information and
+   'citation()' on how to cite R or R packages in publications.
+
+   Type 'demo()' for some demos, 'help()' for on-line help, or
+   'help.start()' for an HTML browser interface to help.
+   Type 'q()' to quit R.</code></pre>
+<ol type="a">
+<li><p>What happens when you type (in the console): <code>license()</code>?</p></li>
+<li><p>What happens when you type (in the console): <code>contributors()</code>?</p></li>
+<li><p>What happens when you type (in the console): <code>citation()</code>?</p></li>
+<li><p>What happens when you type (in the console): <code>demo()</code>?</p></li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./1-03-first-contact.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">First Contact with R</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./1-05-session-management.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Session Management</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
